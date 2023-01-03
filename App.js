@@ -5,9 +5,9 @@ import AppLoading from 'expo-app-loading';
 import { useState } from 'react';
 
 const getFonts = () => Font.loadAsync({
-  'prompt-regular': require('./assets/fonts/Prompt-Regular.ttf'),
-  'prompt-bold': require('./assets/fonts/Prompt-Bold.ttf'),
-  'prompt-semibold': require('./assets/fonts/Prompt-SemiBold.ttf'),
+  'prompt-regular': require('./assets/fonts/prompt/Prompt-Regular.ttf'),
+  'prompt-bold': require('./assets/fonts/prompt/Prompt-Bold.ttf'),
+  'prompt-semibold': require('./assets/fonts/prompt/Prompt-SemiBold.ttf'),
 })
 
 
