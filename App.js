@@ -15,11 +15,22 @@ export default function App() {
 
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
-  return (
-    <View style={styles.container}>
-      <Home/>
-    </View>
-  );
+  if (fontsLoaded) {
+    return (
+      <View style={styles.container}>
+        <Home />
+      </View>
+    );
+  }
+  else {
+    return (
+      <AppLoading
+        startAsync={getFonts}
+        onFinish={() => setFontsLoaded(true)}
+        onError={() => console.log('error')}
+      />
+    )
+  }
 }
 
 const styles = StyleSheet.create({
