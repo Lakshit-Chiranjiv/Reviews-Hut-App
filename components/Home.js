@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const Home = () => {
   return (
     <View style={styles.container}>
-        <Text>Home Page</Text>
+        <Text style={styles.text}>Home Page</Text>
     </View>
   )
 }
@@ -12,6 +12,9 @@ const Home = () => {
 const styles = StyleSheet.create({
     container: {
         padding: 24
+    },
+    text: {
+        fontFamily: 'prompt-regular',
     }
 })
 
