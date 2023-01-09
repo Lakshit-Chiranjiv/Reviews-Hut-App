@@ -5,3 +5,15 @@ import React from "react";
 import Home from "./components/Home";
 import Details from "../components/Details";
 
+const screens = {
+    Home: {
+        screen: Home,
+    },
+    Details: {
+        screen: Details,
+    },
+}
+
+const HomeStack = createNativeStackNavigator(screens);
+
+export default NavigationContainer(HomeStack);
