@@ -5,15 +5,18 @@ import React from "react";
 import Home from "../components/Home";
 import Details from "../components/Details";
 
-const screens = {
-    Home: {
-        screen: Home,
-    },
-    Details: {
-        screen: Details,
-    },
+
+const HomeStack = createNativeStackNavigator();
+
+const HomeStackScreen = () => {
+    return (
+        <NavigationContainer>
+            <HomeStack.Navigator initialRouteName="Home">
+                <HomeStack.Screen name="Home" component={Home} />
+                <HomeStack.Screen name="Details" component={Details} />
+            </HomeStack.Navigator>
+        </NavigationContainer>
+    );
 }
 
-const HomeStack = createNativeStackNavigator(screens);
-
-export default NavigationContainer(HomeStack);
+export default HomeStackScreen;
