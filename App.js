@@ -3,6 +3,7 @@ import Home from './components/Home';
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useState,useCallback, useEffect } from 'react';
+import Navigator from './routes/homeStack'
 
 
 SplashScreen.preventAutoHideAsync();
@@ -46,7 +47,7 @@ export default function App() {
     <View 
       style={styles.container}
       onLayout={onLayoutRootView}>
-      <Home/>
+      <Navigator/>
     </View>
   );
 }
