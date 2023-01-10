@@ -11,7 +11,11 @@ const HomeStack = createNativeStackNavigator();
 const HomeStackScreen = () => {
     return (
         <NavigationContainer>
-            <HomeStack.Navigator initialRouteName="Home">
+            <HomeStack.Navigator initialRouteName="Home" screenOptions={{
+                headerStyle: {
+                    backgroundColor: '#7dbeff',
+                }
+            }}>
                 <HomeStack.Screen name="Home" component={Home} />
                 <HomeStack.Screen name="Details" component={Details} options={{ title: 'Review Details' }}/>
             </HomeStack.Navigator>
