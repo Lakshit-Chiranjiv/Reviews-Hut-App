@@ -3,8 +3,8 @@ import Home from './components/Home';
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useState,useCallback, useEffect } from 'react';
-import Navigator from './routes/homeStack'
-
+import DrawerNavigator from './routes/drawer';
+import 'react-native-gesture-handler';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -47,7 +47,7 @@ export default function App() {
     <View 
       style={styles.container}
       onLayout={onLayoutRootView}>
-      <Navigator/>
+      <DrawerNavigator/>
     </View>
   );
 }
