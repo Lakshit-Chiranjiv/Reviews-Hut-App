@@ -13,8 +13,9 @@ const HomeStackScreen = () => {
         <NavigationContainer>
             <HomeStack.Navigator initialRouteName="Home" screenOptions={{
                 headerStyle: {
-                    backgroundColor: '#7dbeff',
-                }
+                    backgroundColor: '#3d9dfc',
+                },
+                headerTintColor: '#fff',
             }}>
                 <HomeStack.Screen name="Home" component={Home} />
                 <HomeStack.Screen name="Details" component={Details} options={{ title: 'Review Details' }}/>
