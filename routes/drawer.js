@@ -18,3 +18,5 @@ const Drawer = () => {
         </NavigationContainer>
     )
 }
+
+export default Drawer
