@@ -12,8 +12,8 @@ const Drawer = () => {
     return (
         <NavigationContainer>
             <RootDrawerNavigator.Navigator>
-                <RootDrawerNavigator.Screen name="Home" component={HomeStackScreen} />
-                <RootDrawerNavigator.Screen name="About" component={AboutStackScreen} />
+                <RootDrawerNavigator.Screen name="HomeDrawer" component={HomeStackScreen} options={{ headerShown: false, title: "Home" }}/>
+                <RootDrawerNavigator.Screen name="AboutDrawer" component={AboutStackScreen} options={{ headerShown: false, title: 'About' }}/>
             </RootDrawerNavigator.Navigator>
         </NavigationContainer>
     )
