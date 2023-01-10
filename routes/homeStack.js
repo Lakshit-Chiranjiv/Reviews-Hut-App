@@ -13,7 +13,7 @@ const HomeStackScreen = () => {
         <NavigationContainer>
             <HomeStack.Navigator initialRouteName="Home">
                 <HomeStack.Screen name="Home" component={Home} />
-                <HomeStack.Screen name="Details" component={Details} />
+                <HomeStack.Screen name="Details" component={Details} options={{ title: 'Review Details' }}/>
             </HomeStack.Navigator>
         </NavigationContainer>
     );
