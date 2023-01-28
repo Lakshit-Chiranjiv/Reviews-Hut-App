@@ -16,7 +16,12 @@ const HomeStackScreen = () => {
             },
             headerTintColor: '#fff',
         }}>
-            <HomeStack.Screen name="Home" component={Home} options={{ headerTitle: () => <Header/> }} />
+            <HomeStack.Screen name="Home" component={Home} options={({ navigation }) => {
+                return {
+                    headerTitle: () => <Header navigation={navigation} />,
+                    headerLeft: () => null,
+                }
+            }} />
             <HomeStack.Screen name="Details" component={Details} options={{ title: 'Review Details' }}/>
         </HomeStack.Navigator>
     );

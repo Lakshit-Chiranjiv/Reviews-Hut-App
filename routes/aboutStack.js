@@ -15,7 +15,12 @@ const AboutStackScreen = () => {
             },
             headerTintColor: '#fff',
         }}>
-            <AboutStack.Screen name="About" component={About} options={{ headerTitle: () => <Header/> }} />
+            <AboutStack.Screen name="About" component={About} options={({ navigation }) => {
+                return {
+                    headerTitle: () => <Header navigation={navigation} />,
+                    headerLeft: () => null,
+                }
+            }} />
         </AboutStack.Navigator>
     );
 }
