@@ -17,7 +17,7 @@ const AboutStackScreen = () => {
         }}>
             <AboutStack.Screen name="About" component={About} options={({ navigation }) => {
                 return {
-                    headerTitle: () => <Header navigation={navigation} />,
+                    headerTitle: () => <Header navigation={navigation} title='About' />,
                     headerLeft: () => null,
                 }
             }} />
