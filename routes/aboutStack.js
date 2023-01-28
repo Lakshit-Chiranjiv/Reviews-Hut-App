@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import About from "../components/About";
+import Header from "../components/Header";
 
 
 const AboutStack = createNativeStackNavigator();
@@ -14,7 +15,7 @@ const AboutStackScreen = () => {
             },
             headerTintColor: '#fff',
         }}>
-            <AboutStack.Screen name="About" component={About} />
+            <AboutStack.Screen name="About" component={About} options={{ headerTitle: () => <Header/> }} />
         </AboutStack.Navigator>
     );
 }
