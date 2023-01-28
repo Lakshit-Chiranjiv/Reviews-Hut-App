@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 const Header = () => {
   return (
     <View style={styles.header}>
+        <MaterialIcons name='menu' size={28} onPress={() => navigation.openDrawer()} style={styles.icon} />
         <View>
             <Text style={styles.headerText}>My Reviews</Text>
         </View>
@@ -26,6 +27,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#333',
         letterSpacing: 1,
+    },
+
+    icon: {
+        position: 'absolute',
+        left: 16,
     }
 })
 
