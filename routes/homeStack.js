@@ -3,6 +3,7 @@ import React from "react";
 
 import Home from "../components/Home";
 import Details from "../components/Details";
+import Header from "../components/Header";
 
 
 const HomeStack = createNativeStackNavigator();
@@ -15,7 +16,7 @@ const HomeStackScreen = () => {
             },
             headerTintColor: '#fff',
         }}>
-            <HomeStack.Screen name="Home" component={Home} />
+            <HomeStack.Screen name="Home" component={Home} options={{ headerTitle: () => <Header/> }} />
             <HomeStack.Screen name="Details" component={Details} options={{ title: 'Review Details' }}/>
         </HomeStack.Navigator>
     );
