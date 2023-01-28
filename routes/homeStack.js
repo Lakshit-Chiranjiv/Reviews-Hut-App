@@ -18,7 +18,7 @@ const HomeStackScreen = () => {
         }}>
             <HomeStack.Screen name="Home" component={Home} options={({ navigation }) => {
                 return {
-                    headerTitle: () => <Header navigation={navigation} />,
+                    headerTitle: () => <Header navigation={navigation} title='Reviews Home' />,
                     headerLeft: () => null,
                 }
             }} />
